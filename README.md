@@ -24,17 +24,26 @@ PC: ACER NITRO 5 /  Win 10 / 32 GB RAM / GeForce GTX 1660 Ti
 
 ![image](https://user-images.githubusercontent.com/37293282/67181048-bca79f00-f3db-11e9-87b6-22c902c587a6.png)
 
-CUDA-Toolkit:
+
+I made a fresh Installation of Anaconda3 & CuDnn & CUDA / Gforce
+
+Dependency-List: https://www.tensorflow.org/install/source_windows
+
+I decided to setup.. tensorflow_gpu-1.12.0 + Python 3.6.5 + cuDNN 7 + CUDA9
+
+Anaconda3 (https://www.anaconda.com/)
+I use Anaconda and Spyder and the Anaconda-Prompt! My first try to setup ALL within Anaconda-GUI ( TF, Cuda,..) did not work – the different dependent Versions made conflicts. 
+At the end I setup “SOME” in anaconda and some  within the environment-Prompt – figuring out the proper Versions was the biggest pain..
+
+
+CUDA-Toolkit
 For some Tests i need VS2017 - this was installed on my PC before!
-Mainly i followed Marc Jay (https://www.youtube.com/watch?v=Ebo8BklTtmc)...here are some remarks i noticed during this installation:
+Mainly i followed Marc Jay https://www.youtube.com/watch?v=Ebo8BklTtmc).
+
+..here are some remarks i noticed during this installation:
 I take the Gforce-Experience 
 ![image](https://user-images.githubusercontent.com/37293282/67181560-35f3c180-f3dd-11e9-9b0a-a22022c54186.png)
 to setup and Install the Latest drivers (https://www.nvidia.com/content/DriverDownload-March2009/confirmation.php?url=/Windows/436.48/436.48-notebook-win10-64bit-international-whql.exe&lang=us&type=geforcem)
 
-
-Anaconda 3
-
-I use Anaconda and Spyder and the Anaconda-Prompt! My first try to setup ALL within Anaconda-GUI ( TF, Cuda,..) did not work – the different dependent Versions made conflicts. 
-At the end I setup “SOME” in anaconda and some in within the environment-Prompt – figuring out the proper Versions was the biggest pain..
 
 

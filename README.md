@@ -1,4 +1,4 @@
-# TensorFlow_CarOccupancyDetector_V2
+TensorFlow_CarOccupancyDetector_V2
 TensorFlow - Car-Occupancy Detector/Classifier from Scratch
 
 
@@ -30,4 +30,11 @@ Mainly i followed Marc Jay (https://www.youtube.com/watch?v=Ebo8BklTtmc)...here 
 I take the Gforce-Experience 
 ![image](https://user-images.githubusercontent.com/37293282/67181560-35f3c180-f3dd-11e9-9b0a-a22022c54186.png)
 to setup and Install the Latest drivers (https://www.nvidia.com/content/DriverDownload-March2009/confirmation.php?url=/Windows/436.48/436.48-notebook-win10-64bit-international-whql.exe&lang=us&type=geforcem)
+
+
+Anaconda 3
+
+I use Anaconda and Spyder and the Anaconda-Prompt! My first try to setup ALL within Anaconda-GUI ( TF, Cuda,..) did not work – the different dependent Versions made conflicts. 
+At the end I setup “SOME” in anaconda and some in within the environment-Prompt – figuring out the proper Versions was the biggest pain..
+
 

@@ -32,8 +32,8 @@ Dependency-List: https://www.tensorflow.org/install/source_windows
 I decided to setup.. tensorflow_gpu-1.12.0 + Python 3.6.5 + cuDNN 7 + CUDA9
 
 Anaconda3 (https://www.anaconda.com/)
-I use Anaconda and Spyder and the Anaconda-Prompt! My first try to setup ALL within Anaconda-GUI ( TF, Cuda,..) did not work ñ the different dependent Versions made conflicts. 
-At the end I setup ìSOMEî in anaconda and some  within the environment-Prompt ñ figuring out the proper Versions was the biggest pain..
+I use Anaconda and Spyder and the Anaconda-Prompt! My first try to setup ALL within Anaconda-GUI ( TF, Cuda,..) did not work ‚Äì the different dependent Versions made conflicts. 
+At the end I setup ‚ÄúSOME‚Äù in anaconda and some  within the environment-Prompt ‚Äì figuring out the proper Versions was the biggest pain..
 
 
 CUDA-Toolkit
@@ -44,6 +44,5 @@ Mainly i followed Marc Jay https://www.youtube.com/watch?v=Ebo8BklTtmc).
 I take the Gforce-Experience 
 ![image](https://user-images.githubusercontent.com/37293282/67181560-35f3c180-f3dd-11e9-9b0a-a22022c54186.png)
 to setup and Install the Latest drivers (https://www.nvidia.com/content/DriverDownload-March2009/confirmation.php?url=/Windows/436.48/436.48-notebook-win10-64bit-international-whql.exe&lang=us&type=geforcem)
-
 
 

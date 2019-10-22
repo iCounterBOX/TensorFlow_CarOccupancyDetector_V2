@@ -1,3 +1,4 @@
 
 ssd_inception_v2_coco_2017_11_17/frozen_inference_graph.pb
 training/faster_rcnn_inception_v2_pets.config
+*.data-00000-of-00001

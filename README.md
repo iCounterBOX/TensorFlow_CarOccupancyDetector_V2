@@ -85,7 +85,7 @@ import tensorflow as tf
 sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
 ```
 
-My biggest pain and reason why this training-Pipeline did not work run was based on non-compatible Versions of the installed apps we need here! This way i wrote this little Version-Checker:
+My biggest pain and reason why this training-Pipeline did not work was based on non-compatible Versions of the installed apps we need here! This way i wrote this little Version-Checker:
 
 ```python
 import platform
@@ -137,7 +137,7 @@ for i in range(torch.cuda.device_count()):
 ```
 
 
-After following the videos, blogs and hints THIS now the configuration which finally let the training-Session RUN ( from the Version-Checker above ):
+After following the videos, blogs and hints THIS now the configuration which finally let the **training-Session RUN** ( from the Version-Checker above ):
 
 ```python
 Python 3.6.5 |Anaconda, Inc.| (default, Mar 29 2018, 13:32:41) [MSC v.1900 64 bit (AMD64)]
@@ -177,10 +177,25 @@ TWO-Person:
 
 **Preselecting CAR´s from a Video-File to make this "labelImg" a bit easier**
 
-Preparing and labeling the Training-Images is hard work. But as CarOccupency needs CARS we can use pretrained Models (TF) to select those cars from a Video and store the single CAR-Pictures in a folder. The Separation in the two other Folders ( ONE and TWO ) i made manually (  a_carOccupancy_PreSelector_Cars_V2.py )  
-IMPORTANT:  this script is using visualization_utils_ck4CarsSinglePic.py from the TF Utils folder. Its a modified copy of visualization_utils.py!!
-(..you need to copy this then from the utils-folder here into the utils folder from your TF-installation!!)
+Preparing and labeling the Training-Images is hard work. But as CarOccupency needs CARS we can use pretrained Models (TF) to select those cars from a Video and store the single CAR-Pictures in a folder. The Separation in the two other Folders ( ONE and TWO ) i made manually after running this script:  a_carOccupancy_PreSelector_Cars_V2.py  - it produces single Car-Pictures and store them in the  folder ./detectedImages/
+
+IMPORTANT:  **this script is using visualization_utils_ck4CarsSinglePic.py from the TF Utils folder. Its a modified copy of visualization_utils.py!!
+(..you need to copy this then from the utils-folder here into the utils folder from your TF-installation!!)**
 ![image](https://user-images.githubusercontent.com/37293282/67218519-cacedd00-f426-11e9-8741-4d9cc3c897df.png)
+
+the parts where i made adaptions is labeled with "ckoss"...
+
+ ```python
+if WriteSinglePic2File:
+        cv2.imshow('Write PIC 2 File', cv2.resize(crop_img, (960, 720)))     # ckoss
+        global _cCnt   #https://stackoverflow.com/questions/46018872/accessing-variables-defined-in-enclosing-scope
+        _cCnt += 1
+        newImgPath = './detectedImages/car' + str(_cCnt) + '.jpg' 
+        #print('new filename: ' +  newImgPath)
+        cv2.imwrite(newImgPath,cv2.resize(crop_img, (960, 720)))     #  <<<<---- WRITE THE SINGLE PIC TO folder
+```
+
+      
 
 After this step i used Labelimg (https://github.com/tzutalin/labelImg)..
 the HotKey´s i like:  
@@ -188,7 +203,7 @@ Create a rect box ( w ) / Next Image ( d ) / prev Image ( a )
 
 ![image](https://user-images.githubusercontent.com/37293282/67215662-2c407d00-f422-11e9-8236-293d7b658358.png)
 
-I first wanted to know if this training and detection is basically working - And still have to experiment here with the resultion and stuff of the extrected Pictures out from the CAR-Video ( Any Hint highly welcome !!) - So i currently ONLY have 30 Pics!!
+I first wanted to know if this training and detection is basically working - And still have to experiment here with the resultion and stuff of the extrected Pictures out from the CAR-Video ( **Any Hint highly welcome !!**) - So i currently ONLY have 30 Pics!!
 
 Nevertheless - Training was running fine and this frozen inference graph was build ( video from edje !!)
 ```python
@@ -204,13 +219,27 @@ for new deployment delete subfolder **saved_model**
 ![image](https://user-images.githubusercontent.com/37293282/67216891-3cf1f280-f424-11e9-9e5d-f5fe90248450.png)
 
 Training folder only need labelmap.pbtxt  and faster_rcnn_inception_v2_pets.config for a **fresh** training... a training may fail if there are checkpoints stored from an other train-run. In some case we need old checkpoints if we wand to continue a training.
-folder after a successful training:
+Folder after a successful training:
 
 ![image](https://user-images.githubusercontent.com/37293282/67217524-24360c80-f425-11e9-9a7a-a6e933c4ce39.png)
 
 
 Current issue:
 
-the current version is only working with edje_objDetClassifierCarOccu\Object_detection_webcam.py - So i run the Car-Video on my PC and via webcam we get the detected ONE/TWO - frames - FINE! Basically working but we will need hundreds of those windchield-pics ( i have 30 ! ).
+the current version is only working with edje_objDetClassifierCarOccu\Object_detection_webcam.py - So i run the Car-Video on my PC and via webcam (a cam with wire so i can view my PC-Screen!! ) we get the detected ONE/TWO - frames - FINE! Basically working but we will need hundreds of those windshield-pics ( i have 30 ! ).
+
+RESUME
+
+Its working - Training from ZERO, Predictions are possible...For me as newbie on MachineLearning a MileStone :-)
+But shure THIS is now just the beginning..Lots of the Libs, Classes etc are still BlackBoxes for me..and i am still on "hallo World" level with this.
+
+LINK´s ( CREDITS / So Many thanks to the makers who shared their know how with us ):  
+  
+GURU / edje: https://www.youtube.com/watch?v=Rgpfk6eYxJA
+https://github.com/EdjeElectronics/TensorFlow-Object-Detection-API-Tutorial-Train-Multiple-Objects-Windows-10
+https://www.youtube.com/watch?v=bYqvx_DM45U
+https://www.youtube.com/watch?v=nZUxoHPFf4w
+https://towardsdatascience.com/tensorflow-gpu-installation-made-easy-use-conda-instead-of-pip-52e5249374bc
+https://www.tensorflow.org/install/source_windows
 
 

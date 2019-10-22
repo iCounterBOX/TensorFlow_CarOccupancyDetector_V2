@@ -1,0 +1,26 @@
+<annotation verified="yes">
+	<folder>test</folder>
+	<filename>car799.jpg</filename>
+	<path>D:\ALL_DEVEL_VIP\ALL_python\edje_objDetClassifierCarOccu\images\prepareImages\TWO\test\car799.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>960</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>TWO</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>320</xmin>
+			<ymin>13</ymin>
+			<xmax>835</xmax>
+			<ymax>241</ymax>
+		</bndbox>
+	</object>
+</annotation>

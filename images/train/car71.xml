@@ -1,0 +1,26 @@
+<annotation verified="yes">
+	<folder>train</folder>
+	<filename>car71.jpg</filename>
+	<path>D:\ALL_DEVEL_VIP\ALL_python\edje_objDetClassifierCarOccu\images\prepareImages\ONE\train\car71.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>960</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>ONE</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>188</xmin>
+			<ymin>133</ymin>
+			<xmax>827</xmax>
+			<ymax>330</ymax>
+		</bndbox>
+	</object>
+</annotation>

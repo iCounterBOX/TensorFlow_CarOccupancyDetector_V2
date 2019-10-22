@@ -203,7 +203,7 @@ Create a rect box ( w ) / Next Image ( d ) / prev Image ( a )
 
 ![image](https://user-images.githubusercontent.com/37293282/67215662-2c407d00-f422-11e9-8236-293d7b658358.png)
 
-I first wanted to know if this training and detection is basically working - And still have to experiment here with the resultion and stuff of the extrected Pictures out from the CAR-Video ( **Any Hint highly welcome !!**) - So i currently ONLY have 30 Pics!!
+I first wanted to know if this training and detection is basically working - And still have to experiment here with the resultion and stuff of the extracted Pictures out from the CAR-Video ( **Any Hint highly welcome !!**) - So i currently ONLY have 30 Pics!!
 
 Nevertheless - Training was running fine and this frozen inference graph was build ( video from edje !!)
 ```python
@@ -241,5 +241,9 @@ https://www.youtube.com/watch?v=bYqvx_DM45U
 https://www.youtube.com/watch?v=nZUxoHPFf4w
 https://towardsdatascience.com/tensorflow-gpu-installation-made-easy-use-conda-instead-of-pip-52e5249374bc
 https://www.tensorflow.org/install/source_windows
+Marc Jay   https://www.youtube.com/watch?v=Ebo8BklTtmc).
+
+https://www.nvidia.com/content/DriverDownload-March2009/confirmation.php?url=/Windows/436.48/436.48-notebook-win10-64bit-international-whql.exe&lang=us&type=geforcem
 
 
+This .md is written with Markdown-Monster / https://weblog.west-wind.com/posts/2016/Nov/04/Introducing-Markdown-Monster-a-new-Markdown-Editor
